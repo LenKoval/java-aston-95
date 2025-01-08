@@ -1,4 +1,4 @@
-package ru.aston.kovaleva;
+package ru.aston.kovaleva.intro;
 
 import java.time.LocalTime;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@SuppressWarnings({"rawtypes", "unchecked", "java:S125", "java:S1854", "java:S1481", "java:S2293"})
+@SuppressWarnings({"rawtypes", "unchecked"})
 public class Intro {
     private static final Logger logger = LoggerFactory.getLogger(Intro.class);
 
@@ -60,8 +60,8 @@ public class Intro {
         //        list.add("Hello"); //ошибка компиляции
         //        list.add(LocalTime.now()); //ошибка компиляции
 
-        for (int item : list) {
-            logger.info("{}", item);
-        }
+//        for (int item : list) {
+//            logger.info("{}", item);
+//        }
     }
 }
