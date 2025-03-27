@@ -1,0 +1,22 @@
+<configuration>
+    <!-- Определяем файловый аппендер -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/mycolor.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%logger{36}] [%method:%line] - %level - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Определяем консольный аппендер -->
+    <appender name="COLOR_CONSOLE" class="ru.aston.kovaleva.color.MyAppender">
+        <root level="TRACE">
+            <appender-ref ref="COLOR_CONSOLE"/>
+        </root>
+    </appender>
+
+    <!-- Настройка корневого логгера -->
+    <root level="TRACE">
+        <appender-ref ref="FILE"/>
+        <appender-ref ref="COLOR_CONSOLE"/>
+    </root>
+</configuration>
